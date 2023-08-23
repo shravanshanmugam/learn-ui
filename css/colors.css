@@ -2,4 +2,19 @@ body {
   font-size: 22px;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
+  /* same as background-color */
+  background: papayawhip;
+  color: rgb(0, 0, 0);
+}
+
+p {
+  /* alpha channel guides transparency  */
+  color: rgba(51, 51, 51, 0.5);
+}
+
+h2 {
+  /* 00 - no color, ff - full color */
+  /* first two characters for red, second two characters for green, third two characters from blue */
+  /* if characters are repeating we can use shorthand like #345 is same as #334455 */
+  color: rgb(51, 51, 51);
 }
