@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 10%;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Default underlined, blue colored if not visited, purple if visited 
+On long click, changes to red color
+On hover, changes cursor to pointer (hand)
+*/
+
+a {
+  /* remove underline */
+  text-decoration: none;
+  cursor: pointer;
+  color: blue;
+}
+
+/* pseudo class represent current state of an element 
+pseudo class has more specificity*/
+a:visited {
+  color: plum;
+}
+
+a:hover {
+  color: dodgerblue;
+}
+
+a:active {
+  color: red;
+}

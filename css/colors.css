@@ -13,8 +13,8 @@ p {
 }
 
 h2 {
-  /* 00 - no color, ff - full color */
-  /* first two characters for red, second two characters for green, third two characters from blue */
-  /* if characters are repeating we can use shorthand like #345 is same as #334455 */
+  /* 00 - no color, ff - full color 
+  first two characters for red, second two characters for green, third two characters from blue
+  if characters are repeating we can use shorthand like #345 is same as #334455 */
   color: rgb(51, 51, 51);
 }

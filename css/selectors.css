@@ -5,8 +5,8 @@
   /* border: 1px solid red; */
 }
 
-/* children inherit parent style properties related to typography */
-/* forms don't inherit parent */
+/* children inherit parent style properties related to typography
+forms don't inherit parent */
 body {
   font-size: 22px;
   /* not inherited */
@@ -38,9 +38,9 @@ p {
   color: purple;
 }
 
-/* cascading - last rule for element overwrites all the previous styles */
-/* class name and id select has more specificity - this will overwrite element style */
-/* specificity - id selector > class selector > element selector */
+/* cascading - last rule for element overwrites all the previous styles
+class name and id select has more specificity - this will overwrite element style
+specificity - id selector > class selector > element selector */
 p {
   color: red;
 }

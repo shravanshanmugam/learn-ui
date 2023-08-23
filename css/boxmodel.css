@@ -2,12 +2,12 @@
 * {
   margin: 0;
   padding: 0;
-  /* context-box implies only for content */
-  /* border-box implies for content + padding + border */
+  /* context-box implies only for content 
+  border-box implies for content + padding + border */
   box-sizing: border-box;
 }
-/* content < padding < border < margin */
-/* border < outline */
+/* content < padding < border < margin 
+border < outline */
 .container {
   border: 2px dashed red;
   font-size: 1.5rem;
