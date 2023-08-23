@@ -15,17 +15,23 @@ a {
   /* remove underline */
   text-decoration: none;
   cursor: pointer;
-  color: blue;
+  color: hsl(207, 44%, 49%);
 }
 
 /* pseudo class represent current state of an element 
-pseudo class has more specificity*/
+pseudo class has more specificity
+if hover pseudo class goes before visited pseudo class, hover effect will not work as visited will override hover because of order*/
 a:visited {
   color: plum;
 }
 
-a:hover {
-  color: dodgerblue;
+/* pick hsl format color on anchor tag
+on pseudo class change hue or opacity*/
+a:hover,
+a:focus {
+  color: hsl(189, 44%, 49%, 0.8);
+  background: gold;
+  /* opacity: 0.8; */
 }
 
 a:active {
