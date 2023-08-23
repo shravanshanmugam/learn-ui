@@ -1,0 +1,29 @@
+/* CSS reset - remove default margin, padding from all elements */
+* {
+  margin: 0;
+  padding: 0;
+  /* context-box implies only for content */
+  /* border-box implies for content + padding + border */
+  box-sizing: border-box;
+}
+/* content < padding < border < margin */
+/* border < outline */
+.container {
+  border: 2px dashed red;
+  font-size: 1.5rem;
+  /* top, right, bottom, left */
+  /* margin: 1.5em 2em 3em 4em; */
+  /* top, left & right, bottom */
+  /* margin: 1.5em 2em 3em; */
+  /* top & bottom, left & right */
+  /* margin: 1.5em 2em; */
+  /* top & bottom & left & right */
+  margin: 1.5em;
+  padding: 1.5em;
+  /* border-top-width, border-top-style, border-top-color */
+  /* border-top: 5px dashed green;
+  border-right: 10px dotted blue; */
+  border: 10px double red;
+  outline: 5px solid purple;
+  outline-offset: 5px;
+}
