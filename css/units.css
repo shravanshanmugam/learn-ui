@@ -1,0 +1,50 @@
+* {
+  /* remove all default margin, padding and box sizing which was creating extra space */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* default font size is 16px */
+html {
+  /* we don't want to use absolute value in entire document in case user has preference to view larger font size */
+  /* font-size: 16px; */
+}
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  /* 50% of parent which is body */
+  width: 50%;
+}
+
+h1 {
+  /* it is ok to use absolute value here - it will apply on all devices, all zoom settings */
+  border: 2px dashed red;
+  /* percentage is relative value and it is percentage of parent element */
+  /* 50% of parent which is header */
+  /* overall 25% of body */
+  width: 50%;
+  font-size: 3rem;
+  padding: 0.5em;
+}
+
+main {
+  /* vw unit is relative to view port */
+  /* 1vw is 50% of view port width */
+  width: 50vw;
+  background-color: skyblue;
+  font-size: 2rem;
+}
+
+p {
+  /* em unit is font size relative to size of parent element */
+  /* px unit is static font size */
+  /* rem unit is font size relative to size of root element - like html element or default browser size */
+  /* 1em = 16px */
+  /* 2em would make it double main font size */
+  font-size: 2rem;
+  /* only accomodates 40 characters */
+  width: 40ch;
+}
