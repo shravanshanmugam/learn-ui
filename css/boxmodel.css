@@ -36,6 +36,6 @@
   border: 2px solid black;
   outline: 2px solid red;
   outline-offset: 0.25rem;
-  /* set it to half the height and width to make it circle */
+  /* set border-radius to half the height and width to make it circle */
   border-radius: 50px;
 }
