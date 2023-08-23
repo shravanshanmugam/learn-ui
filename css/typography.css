@@ -1,0 +1,47 @@
+/*
+
+Typography is the way that text
+is arranged and presented.
+
+*/
+/* import Roboto font into CSS file - this is alternative to adding link tags in html file */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 10%;
+  font-size: 2rem;
+  /* common font family - sarif, sans-serif, monospace, cursive, fantasy */
+  /* browser picks first font, if not fallback to second font, if not fallback to last font */
+  /* font names with space need quotes */
+  font-family: "Roboto", sans-serif;
+}
+
+/* explicitly inherit font size from parent for form elements */
+input,
+button {
+  font: inherit;
+}
+
+p {
+  /* text is uniformly aligned on one side but not the other size */
+  text-align: right;
+  /* indent is only applied to the first line */
+  text-indent: 2em;
+  /* height between two lines */
+  /* default line height is 1.2 */
+  line-height: 1.5;
+  /* space between the letters */
+  letter-spacing: 0.1em;
+  /* space between the words */
+  word-spacing: 0.2em;
+  /* thickness of a font */
+  /* default font size is 400 */
+  font-weight: 500;
+  /* italic or oblique */
+  font-style: oblique;
+}
+
+span {
+  text-decoration: underline;
+  text-transform: capitalize;
+}
