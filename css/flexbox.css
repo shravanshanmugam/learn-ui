@@ -18,13 +18,35 @@ body {
   min-height: 400px;
   margin-inline: auto;
   border: 1px solid black;
+  display: flex;
+  gap: 1rem;
+  /* default value is flex-start for display flex */
+  justify-content: center; /* checkout center, space-around, space-between, space-evenly, flex-end options */
+  /* gap between each box */
+  /* align horizontally or vertically depending on the flex directon row or column */
+  align-items: center;
+  /* default value is row */
+  flex-direction: row; /* checkout column, row-reverse, column-reverse */
+  /* resize window you will see the boxes overflow outside container
+  so we add flex wrap */
+  flex-wrap: wrap;
+  /* shorthand for flex-direction, flex-wrap attributes */
+  /* flex-flow: row wrap; */
+  align-content: space-evenly;
 }
 
+/* note that minimum width of box is 100px and maximum width of container is 800 px
+so if boxes are arranged in same row there would be space for two more boxes */
 .box {
   min-width: 100px;
-  min-height: 100px;
+  /* min-height: 100px; */
+  height: 100px;
   background-color: black;
   color: white;
   font-size: 2rem;
   padding: 0.5rem;
+  /* use these 3 properties to center any element inside of a container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
