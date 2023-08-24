@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.block {
+  /* check in mobile view and resize window to see how the block size changes */
+  width: 30vw;
+  height: 30vw;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+
+/* block floats to the left allowing other element to wrap on the right side */
+.left {
+  float: left;
+  /* create space between block and text */
+  margin-right: 1rem;
+}
+
+p {
+  /* this will not work as it applies margin from beginning of the width of paragraph 
+  select the p element in Inspect -> Elements to see where the margin is applied*/
+  /* margin-left: 20px; */
+}
+
+.right {
+  float: right;
+  margin-left: 1rem;
+}
+
+/* not recommended as it does not wrap entire container */
+.clear {
+  /* move below */
+  clear: both;
+}
+
+section {
+  background-color: bisque;
+  border: 1px solid #333;
+  padding: 1rem;
+  /* container element extends to wrap all the elements inside it */
+  /* overflow: auto; */
+  /* correct approach so container wraps all elements inside it */
+  display: flow-root;
+}
