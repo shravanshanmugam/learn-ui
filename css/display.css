@@ -24,7 +24,7 @@ p {
   background-color: #333;
   color: whitesmoke;
   padding: 1rem;
-  /* cannot apply margin, height, width to an inline element */
+  /* cannot apply margin, height, width to an inline element. below properties won't have any effect */
   margin-top: 100px;
   height: 20px;
   width: 200px;

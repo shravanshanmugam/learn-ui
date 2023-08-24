@@ -21,6 +21,7 @@ ul {
 }
 
 li {
+  /* make li as block level element in the same line */
   display: inline-block;
   /* apply margin on left and right only */
   margin-inline: 0.5rem;
