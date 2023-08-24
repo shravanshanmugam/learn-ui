@@ -32,7 +32,7 @@ h1 {
 
 main {
   /* vw unit is relative to view port
-  1vw is 50% of view port width */
+  50vw is 50% of view port width */
   width: 50vw;
   background-color: skyblue;
   font-size: 2rem;
