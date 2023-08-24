@@ -56,4 +56,5 @@ body {
   change flex-wrap to nowrap and check it out */
   /* [flex] shorthand for flex-grow, flex-shrink, flex-basis attributes */
   /* flex: 2 2 250px; */
+  order: -1; /* change order - move it before box 1*/
 }
