@@ -23,6 +23,8 @@ border < outline */
   /* border-top-width, border-top-style, border-top-color */
   /* border-top: 5px dashed green;
   border-right: 10px dotted blue; */
+  /* top-left, top-right, bottom-right, bottom-left */
+  border-radius: 4px 16px 32px 48px;
   border: 10px double red;
   outline: 5px solid purple;
   outline-offset: 5px;
