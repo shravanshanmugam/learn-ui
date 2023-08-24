@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  min-height: 200vh;
+}
+
+.outer-container {
+  border: 3px dashed black;
+  /* vw vh units allow for relative size when resizing window 
+  Inspect -> Elements -> Mobile view resize window and check it out */
+  width: 75vw;
+  height: 85vh;
+  margin: 40px auto;
+  /* remove position relative and you will see absolute container move to top left corner of the screen */
+  position: relative;
+}
+
+.inner-container {
+  border: 2px solid blue;
+  width: 40vw;
+  height: 60vh;
+  margin: 200px auto;
+  /* add position relative and you will see absolute container move to top left corner of the inner container */
+  /* position: relative; */
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  color: white;
+  padding: 1rem;
+}
+/* default position value is static 
+top, left, right or bottom does not work with static position */
+.absolute {
+  background-color: blue;
+  /* we need to set position along with top, left, right or bottom
+  absolute position is position w.r.t. relative parent. without relative parent it takes position w.r.t. window
+  if position is set to relative to multiple elements, it takes nearest relative parent
+   */
+  position: absolute;
+  /* read it as absolute position from the top, from the left of the nearest relative parent */
+  top: 5px;
+  left: 5px;
+  /* container that comes second will go on top of first container 
+  we can change this using z-index
+  default value of z-index is 0 
+  */
+  z-index: 1;
+}
+
+.relative {
+  background-color: red;
+  /* position relative is w.r.t. parent */
+  position: relative;
+  top: 300px;
+  left: 100px;
+}
+
+.fixed {
+  background-color: green;
+  position: fixed;
+  /* specifying top, left, right or bottom fixes it w.r.t. window 
+  it will stay at same spot even when we scroll */
+  top: 100px;
+  left: 200px;
+}
+
+.sticky {
+  background-color: black;
+  position: sticky;
+  /* when scrolling, it sticks to top, left, right or bottom till the parent container runs out */
+  top: 0;
+}
