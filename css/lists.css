@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  padding: 5% 10%;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+ol {
+  /* default list-style-type is decimal */
+  list-style-type: lower-alpha;
+  /* remove number and padding */
+  /* list-style-type: none;
+  padding: 0; */
+}
+
+ul {
+  /* attributes list-style-type list-style-position list-style-image */
+  list-style-type: square;
+  /* default list-style-position is outside - stays outside of the list */
+  text-align: center;
+  list-style-position: inside;
+  color: green;
+  line-height: 1.6;
+  /* list-style-image: url("../images/checkmark.png"); */
+  /* list-style: square inside url("../images/checkmark.png"); */
+}
+
+/* only affect li inside ul */
+ul li {
+  color: blue;
+}
+
+/* only affects 2nd item in li inside url */
+ul li:nth-child(2) {
+  color: red;
+}
+
+/* marker is pseudo class selector for bullet point 
+applies to bullet point inside ul */
+ul ::marker {
+  color: red;
+  font-family: fantasy;
+  font-size: 1em;
+  /* applies to all li elements by replacing the marker */
+  content: "Only 5$ >> ";
+}
