@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* CSS - reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* set font family for entire body and align to center */
+body {
+  margin: 0.5rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+/* border around the menu
+maximum width of menu is fixed to 600px
+adjust font */
+nav {
+  border: 2px solid #333;
+  border-radius: 2rem;
+  margin: 0 auto 1rem;
+  max-width: 600px;
+  font-size: 3rem;
+  line-height: 7rem;
+}
+
+/* background color to menu title and fix border on top */
+h2 {
+  padding: 1rem;
+  background: gold;
+  border-radius: 2rem 2rem 0 0;
+}
+
+/* remove bullet from list */
+ul {
+  list-style-type: none;
+}
+
+/* add border on top of list for separation between items */
+li {
+  border-top: 1px solid #333;
+}
+
+/* anchor tag is an inline element
+change anchor tag to block level element so it takes full width of the parent element 
+this will help the highlighting effect on hover */
+li a {
+  display: block;
+}
+
+/* remove decoration for link and visited links */
+li a,
+li a:visited {
+  text-decoration: none;
+  color: #333;
+}
+
+/* on hover under line and highlight background and reverse the color */
+li a:hover,
+li a:focus {
+  text-decoration: underline;
+  background: #333;
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+/* fix border on bottom for the last child in the list */
+li:last-child a {
+  border-radius: 0 0 2rem 2rem;
+}
