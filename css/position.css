@@ -17,7 +17,7 @@ body {
   /* vw vh units allow for relative size when resizing window 
   Inspect -> Elements -> Mobile view resize window and check it out */
   width: 75vw;
-  height: 85vh;
+  height: 90vh;
   margin: 40px auto;
   /* remove position relative and you will see absolute container move to top left corner of the screen */
   position: relative;
