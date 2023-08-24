@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  background-color: aqua;
+  width: 50%;
+}
+
+/* block level elements take 100% width of what's given to them by the parent */
+p {
+  background-color: lightgray;
+  display: inline-block;
+}
+
+.opposite {
+  /* changes to block level element and moves to separate line */
+  /* display: block; */
+  /* changes to block level element but stays within the current line */
+  display: inline-block;
+  background-color: #333;
+  color: whitesmoke;
+  padding: 1rem;
+  /* cannot apply margin, height, width to an inline element */
+  margin-top: 100px;
+  height: 20px;
+  width: 200px;
+}
