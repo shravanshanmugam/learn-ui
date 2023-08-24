@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.columns {
+  /* separate upto 4 columns */
+  column-count: 4;
+  /* min width of a column
+  when window is resized column count will automatically decrease */
+  column-width: 250px;
+  /* attributes column-count, column-width */
+  /* columns: 4 250px; */
+  /* line divider between columns */
+  column-rule: 3px solid #333;
+  column-gap: 3rem;
+}
+
+.columns p {
+  /* margin collapsing - pick max of margin of top and bottom elements instead of adding them up
+  not applicable to left and right elements */
+  margin-top: 0;
+}
+
+.columns h2 {
+  margin-top: 0;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  /* avoid breaking of h2 element into two columns on resizing 
+  check this out by increasing height to 200px and resizing in Inspect -> Elements */
+  break-inside: avoid;
+  /* keep at top of second column instead of bottom of first column 
+  one issue it causes is all elements shrink to fit into 3 columns
+  at this point we would want it to fit into one column by moving h2 below first column */
+  break-before: column;
+}
+
+/* we select this way instead of .quote to have more specificity than .columns p for the margin-top property to take effect */
+.columns .quote {
+  font-size: 3rem;
+  text-align: center;
+  color: #333;
+  /* span all columns */
+  column-span: all;
+  /* this does not work when selector is .quote since .columns p has more specificity than .quote 
+  you can verify on the specificity calculator 
+  we can fix this by changing selector to .columns .quote */
+  margin-top: 2rem;
+}
+
+.nowrap {
+  /* when width is less than required, do not wrap in same line 
+    moves to the next line */
+  white-space: nowrap;
+}
