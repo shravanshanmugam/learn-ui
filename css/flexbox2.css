@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  min-height: 400px;
+  margin-inline: auto;
+  border: 1px solid black;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+}
+
+.box {
+  /* commenting out min-width */
+  /* min-width: 100px; */
+  /* min-height: 100px; */
+  height: 100px;
+  background-color: black;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  /* use these 3 properties to center any element inside of a container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* style each flex item or box */
+  /* grow evenly to fill out the flex box */
+  flex-grow: 1;
+  /* sets the width for each box */
+  flex-basis: 100px;
+  /* [flex] shorthand for flex-grow, flex-shrink, flex-basis attributes */
+  /* flex: 1 1 100px; */
+}
+
+.box:nth-child(2) {
+  /* grow twice as much as the other child but only after flex-basis is filled */
+  flex-grow: 2;
+  /* inverse is flex-shrink 
+  change flex-wrap to nowrap and check it out */
+  /* [flex] shorthand for flex-grow, flex-shrink, flex-basis attributes */
+  /* flex: 2 2 250px; */
+}
