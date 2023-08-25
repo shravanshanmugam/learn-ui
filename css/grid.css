@@ -26,7 +26,7 @@ body {
 
 .el {
   background-color: rebeccapurple;
-  columns: #fff;
+  color: #fff;
   display: grid;
   place-content: center;
 }
