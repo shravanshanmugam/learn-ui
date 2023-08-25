@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+/* Begin Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+  background-color: aliceblue;
+  /* apply two images on the background */
+  /* create a gradient switching from one color to another
+  we can add multiple colors as parameters 
+  default direction is top to bottom
+  check out to left, to right, to top */
+  background-image: url("../images/bubbles.png"),
+    linear-gradient(to left, steelblue, white);
+  /* repeat bubbles on y-axis i.e. from top to bottom, and don't repeat gradient */
+  background-repeat: repeat-y, no-repeat;
+  background-position: right center;
+  /* reduce the size of the bubbles
+  20% for bubbles and auto for gradient */
+  background-size: 20%, auto;
+}
