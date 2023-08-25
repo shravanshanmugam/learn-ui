@@ -44,7 +44,7 @@ body {
   checkout other values like top left, top right etc. */
   background-position: center center;
   /* checkout contain */
-  /background-size: cover;
+  background-size: cover;
 }
 
 .hero {
