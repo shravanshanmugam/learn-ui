@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+  background-color: aliceblue;
+  /* background-image: url("../images/bubbles.png"),
+    linear-gradient(to left, steelblue, white);
+  background-repeat: repeat-y, no-repeat;
+  background-position: right center; */
+
+  /* shorthand for background with attributes background-repeat, background-position, background-image 
+  we can add multiple images separated by a comma
+  the same attributes can be used for all the images */
+  background: repeat-y right center url("../images/bubbles.png"),
+    no-repeat linear-gradient(to left, steelblue, white);
+  background-size: 20%, auto;
+}
+
+.clip {
+  font-weight: 800;
+  font-size: 18rem;
+  text-align: center;
+  background-image: url("../images/scenic-2200x1331.png");
+  background-size: 100%;
+  text-transform: uppercase;
+  /* checkout whether background-clip can be used in browsers 
+  some browsers don't support few attributes
+  others support as part of their webkit which is a rendering engine
+  to use that attribute we have to add their webkit as a prefix */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: hsla(0, 0%, 0%, 0.2);
+}
