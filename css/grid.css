@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+
+  /* comment out below code for grid without body */
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: 50px auto 50px;
+  /* define the layout of the page 
+  header in first row expanding to 9 columns
+  main in middle expanding to 7 rows
+  sidebase in middle expanding to last 2 columns
+  footer at bottom expanding to 9 columns
+  */
+  grid-template-areas: "hd hd hd hd hd hd hd hd hd" "mn mn mn mn mn mn mn sb sb" "ft ft ft ft ft ft ft ft ft";
+  column-gap: 0.5rem;
+}
+
+.el {
+  background-color: rebeccapurple;
+  columns: #fff;
+  display: grid;
+  place-content: center;
+}
+
+.header {
+  grid-area: hd;
+}
+
+.sidebar {
+  grid-area: sb;
+  background-color: blue;
+}
+
+.footer {
+  grid-area: ft;
+}
+
+.container {
+  grid-area: mn;
+  /* padding: 1em; */
+  background-color: aqua;
+  min-height: 400px;
+  display: grid;
+  /* default value is row */
+  /* grid-auto-flow: column; */
+  /* fraction unit applicable for css grids */
+  /* grid-template-columns: 2fr 1fr 1fr;  */
+  /* shorthand using repeat function - it will repeat the pattern n number of times */
+  grid-template-columns: repeat(2, 1fr 2fr);
+  /* height of rows */
+  /* grid-auto-rows: 200px; */
+  /* min max function - sets min as first parameter and max as second parameter 
+  when auto it will fill based on height of container */
+  grid-auto-rows: minmax(150, auto);
+  /* shorthand for row-gap, column-gap attributes */
+  gap: 3rem 1rem;
+}
+
+.box {
+  background-color: black;
+  color: #fff;
+  border: 2px solid red;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+.box:first-child {
+  background-color: blue;
+  /* shorthand for grid-column-start, grid-column-end attributes
+  parameter is count line number
+  it respects grid-template-columns, grid-template-rows attributes for sizing */
+  grid-column: 1/4;
+  /* shorthand for grid-row-start, grid-row-end attributes */
+  grid-row: 1/3;
+
+  display: grid;
+  /* shorthand for align-content, justify-content 
+  justify-content says how to fill element within the line 
+  align-content says where to place the line 
+  set single value will take it for both */
+  place-content: end center;
+  /* same as using flex */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.box:nth-child(2) {
+  background-color: purple;
+  grid-column: 1/5;
+  grid-row: 3/4;
+}
